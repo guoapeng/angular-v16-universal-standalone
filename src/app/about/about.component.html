@@ -1,9 +1,8 @@
 <p>about works!</p>
 
-<hr>
-
-<markdown ngPreserveWhitespaces>
-    ### Markdown  
-    This is some *markdown* rendered with **ngx-markdown**.
-</markdown>
-
+<hr />
+<div *ngIf="post$ | async as post">
+  <p>
+    <markdown>{{ post }}</markdown>
+  </p>
+</div>
